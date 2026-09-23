@@ -1,12 +1,21 @@
 require_relative 'metodos_input.rb'
 require_relative 'math_operation.rb'
 
-puts "Bem Vindo a Calculadora!\n"
+puts "Bem Vindo a Calculadora!\n\n"
 
-numero_1, numero_2 = input_numbers()
-operator = input_operator()
+while true
+    puts "-"*30
+    
+    numero_1 = input_number()
+    return if (numero_1 ) == nil 
 
-resultado = operation_calculator(numero_1, numero_2, operator)
+    operator = input_operator()  
+    return if operator == nil 
 
-puts "#{numero_1} #{operator} #{numero_2} = #{resultado}"
+    numero_2 = input_number()
+    return if (numero_2 ) == nil 
 
+    resultado = operation_calculator(numero_1, numero_2, operator)
+
+    puts "#{numero_1} #{operator} #{numero_2} = #{resultado}\n\n" if !resultado.is_a?(String)
+end

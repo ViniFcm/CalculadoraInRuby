@@ -1,7 +1,7 @@
 require_relative 'metodos_input.rb'
 require_relative 'math_operation.rb'
 
-puts "Bem Vindo a Calculadora!\n\n"
+puts "Bem Vindo a Calculadora!\nDigite espaço para sair!\n"
 
 while true
     puts "-"*30
